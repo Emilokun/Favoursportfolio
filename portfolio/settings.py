@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 
-SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-tc0tcdc2&&=f6h_4a1iu-*5gp4)tij)b_tbqzra)xpq_plt47y')
-DEBUG = os.environ.get('DEBUG', 'True') == 'True'
-ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '127.0.0.1').split(",")
+SECRET_KEY = 'django-insecure-tc0tcdc2&&=f6h_4a1iu-*5gp4)tij)b_tbqzra)xpq_plt47y'
+DEBUG = False
+ALLOWED_HOSTS = ['192.168.43.79', '*', 'localhost', '127.0.0.1']
 
 
 # Application definition
@@ -77,7 +77,7 @@ WSGI_APPLICATION = 'portfolio.wsgi.application'
 
 if not DEBUG:
     DATABASES = {
-	"default": dj_database_url.parse(os.environ.get("DATABASE_URL"))
+	"default": dj_database_url.parse('postgres://portfoliodb_59vr_user:IXC49IO3qzL00yP9nsziuuVMcZ2ONijC@dpg-co3vepa1hbls73bn72fg-a.oregon-postgres.render.com/portfoliodb_59vr')
 }
     
 else:
