@@ -18,6 +18,7 @@
           <li><a href="#about">About</a></li>
           <li><a href="#experience">Experience</a></li>
           <li><a href="#projects">Projects</a></li>
+          <li><a href="#certifications">Certifications</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
@@ -34,6 +35,7 @@
           <li><a href="#about" onclick="toggleMenu()">About</a></li>
           <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
           <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#certifications" onclick="toggleMenu()">Certifications</a></li>
           <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
         </div>
       </div>
@@ -198,6 +200,30 @@
         onclick="location.href='./#contact'"
       />
     </section>
+    
+    <section id="certifications">
+      <h1 class="title">Certifications</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          
+          {% for certification in certifications  %}
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="{{ certification.image_url }}"
+                alt="Project 2"
+                class="project-img"
+                style="height: 300px; ""
+              />
+            </div>
+            <p style="font-size: 18px;"> {{ certification.description }} </p>
+           
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+
     <section id="contact">
       <p class="section__text__p1">Get in Touch</p>
       <h1 class="title">Contact Me</h1>

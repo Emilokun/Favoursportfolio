@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Hero, Media, Technology, Tools, Project
+from .models import Hero, Media, Technology, Tools, Project, Certifications
 
 # Create your views here.
 def home(request):
@@ -8,11 +8,13 @@ def home(request):
     technologies = Technology.objects.all();
     tools = Tools.objects.all();
     projects = Project.objects.all();
+    certifications = Certifications.objects.all();
     context = {
         'hero': hero,
         'media': media,
         'technologies': technologies,
         'tools': tools,
         'projects': projects,
+        'certifications': certifications
     }
     return render(request, 'home.html', context);
